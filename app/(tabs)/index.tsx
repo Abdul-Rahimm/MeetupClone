@@ -5,7 +5,6 @@ import events from '../../assets/events.json';
 import { Text } from 'react-native';
 import { FlatList } from 'react-native';
 
-const event = events[0];
 export default function Home() {
   return (
     <>
