@@ -1,14 +1,16 @@
 import { Stack } from 'expo-router';
 import React from 'react';
-import { Text, View } from 'react-native';
+import EventCard from '~/components/EventCard';
+import events from '../../assets/events.json';
+import { Text } from 'react-native';
+import { FlatList } from 'react-native';
 
+const event = events[0];
 export default function Home() {
   return (
     <>
       <Stack.Screen options={{ title: 'Events' }} />
-      <View>
-        <Text>Hello</Text>
-      </View>
+      <FlatList data={events} renderItem={({ item }) => <EventCard data={item} />} className="" />
     </>
   );
 }
